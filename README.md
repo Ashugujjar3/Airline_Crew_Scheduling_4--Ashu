@@ -46,9 +46,69 @@ The dataset includes the following major columns:
 - **CSV / DataFrame Processing**
 
 ---
+2. Upload Code & Dataset to Databricks
 
-## 🚀 How to Run This Project
+Upload the dataset to /FileStore/tables/
 
-### **1. Clone the Repository**
-```bash
-git clone https://github.com/your-username/Airline-Crew-Scheduling.git
+Open the Scala/Spark SQL notebook
+
+3. Load the Dataset
+
+Example:
+
+val df = spark.read.option("header", "true").csv("/FileStore/tables/Airline_Dataset_Updated___v2.csv")
+df.createOrReplaceTempView("airline")
+
+4. Run Queries
+
+Use:
+
+SELECT * FROM airline;
+
+
+or advanced queries depending on your use case.
+
+📘 Project Contents
+
+This repository includes:
+
+✔️ Spark SQL queries (Easy, Moderate, Advanced)
+
+✔️ Scala DataFrame API code
+
+✔️ Crew-related analytics (Pilots, flights, statuses, airports)
+
+✔️ Clean and documented notebook
+
+✔️ README documentation
+
+📊 Sample Analyses Performed
+
+Find pilot-wise total flights
+
+Analyze delays or cancelled flights
+
+Analyze passenger demographics
+
+Country-wise or continent-wise flight distribution
+
+Scheduling insights for better crew assignment
+
+🤝 Contribution
+
+Feel free to submit:
+
+Improvements
+
+Bug fixes
+
+Additional analytics
+
+New features
+
+Please open an issue before submitting major changes.
+
+👨‍💻 Author
+
+Ashu
+Roll Number: 2301201105
